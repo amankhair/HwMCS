@@ -1,0 +1,73 @@
+﻿<Window x:Class="HomeWorkMCS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWorkMCS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="785" Icon="Images/wallpaper.jpg">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Оборудование" >
+                    <MenuItem Header="Вывести"
+                              x:Name="PrintEquipments"
+                              Click="PrintEquipments_OnClick"></MenuItem>
+                    <MenuItem Header="Создать"
+                              x:Name="CreateEquipments"
+                              Click="CreateEquipments_OnClick"/>
+                    <MenuItem Header="Удалить"
+                              x:Name="DeleteEquipments"
+                              Click="DeleteEquipments_OnClick"/>
+                    <MenuItem Header="Сохранить"/>
+                </MenuItem>
+
+                <MenuItem Header="Производитель">
+                    <MenuItem Header="Вывести"
+                              x:Name="PrintManufacturers"
+                              Click="PrintManufacturers_OnClick"></MenuItem>
+                    <MenuItem Header="Создать"
+                              x:Name="CreateManufacturers"
+                              Click="CreateManufacturers_OnClick"/>
+                    <MenuItem Header="Удалить"
+                              x:Name="DeleteManufacturer"
+                              Click="DeleteManufacturer_OnClick"/>
+                    <MenuItem Header="Сохранить"
+                              x:Name="SaveManufacturer"
+                              Click="SaveManufacturer_OnClick"/>
+                    <MenuItem Header="Экспорт">
+                        <MenuItem Header="XML" 
+                                  x:Name="XmlExport"
+                                  Click="XmlExport_OnClick"></MenuItem>
+                        <MenuItem Header="SOAP" 
+                                  x:Name="SoapExport"
+                                  Click="SoapExport_OnClick"></MenuItem>
+                    </MenuItem>
+
+                </MenuItem>
+
+                <MenuItem Header="Модель">
+                    <MenuItem Header="Вывести Таблицу"
+                              x:Name="PrintModels"
+                              Click="PrintModels_OnClick"/>
+                    <MenuItem Header="Создать"/>
+                    <MenuItem Header="Удалить"
+                              x:Name="DeleteModel"
+                              Click="DeleteModel_OnClick"/>
+                    <MenuItem Header="Сохранить"/>
+                    <MenuItem Header="Экспорт" />
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1"></Frame>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿<Page x:Class="HomeWorkMCS.View.CreateEquipments"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HomeWorkMCS.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="525"
+      Title="CreateEquipments">
+
+
+
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="Гараж (№):" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="garageRoomBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Производитель (ID):" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="13"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="manufacturerIdBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Модель (ID):" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="modelIdBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Год выпуска:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="manufYearBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Серийный номер:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="serialNoBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Дата создания (ГГГГ-ММ-ДД):" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="createDateBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Счетчик:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="meteredBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Label Content="Последняя дата (ГГГГ-ММ-ДД):" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Margin="5" Width="180" Height="35" FontSize="15" x:Name="lastDateBox" VerticalContentAlignment="Center" HorizontalAlignment="Left"></TextBox>
+
+        <Button Grid.Row="8" Grid.Column="1" Content="Создать" 
+                x:Name="createEquipment" Click="CreateEquipment_OnClick"
+                Background="CornflowerBlue" BorderBrush="CornflowerBlue" Foreground="White"
+                Height="40" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Margin="25,0,0,0">
+        </Button>
+    </Grid>
+</Page>

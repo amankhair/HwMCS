@@ -1,0 +1,56 @@
+﻿<Page x:Class="HomeWorkMCS.DeletePoint.DeleteManufacturer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HomeWorkMCS.DeletePoint"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="785"
+      Title="DeleteManufacturer">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="15">
+            <ListView x:Name="ManufacturerList">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="Производитель (ID)" DisplayMemberBinding="{Binding Path=intManufacturerID}" />
+                            <GridViewColumn Header="Контрольный список (ID)" DisplayMemberBinding="{Binding Path=strManufacturerChecklistID}"/>
+                            <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path=strName}" />
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+
+        <Grid x:Name="GridManufacturer" Grid.Row="1" Margin="15" DataContext="{Binding ElementName=ManufacturerList, Path=SelectedItem}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Content="Производитель (ID):" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+            <TextBox x:Name="ManIdBox" Grid.Row="0" Grid.Column="1" Margin="5" Width="250" Height="35" FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding Path=intManufacturerID}"/>
+
+            <Label Content="Контрольный список (ID):" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="13"/>
+            <TextBox x:Name="ManChListIdBox" Grid.Row="1" Grid.Column="1" Margin="5" Width="250" Height="35" FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding Path=strManufacturerChecklistID}"/>
+
+            <Label Content="Название:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" FontSize="15"/>
+            <TextBox x:Name="NameBox" Grid.Row="2" Grid.Column="1" Margin="5" Width="250" Height="35" FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding Path=strName}"/>
+        </Grid>
+
+        <Button x:Name="Delete" Grid.Row="2" Height="40" Width="150" HorizontalAlignment="Right" Margin="0,0,75,0"
+                Click="Delete_OnClick">Delete</Button>
+    </Grid>
+</Page>
